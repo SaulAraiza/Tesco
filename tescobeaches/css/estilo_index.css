@@ -1,0 +1,39 @@
+body {
+    background-color: #20B2AA;  
+    font-family: Arial, sans-serif;
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+.eslogan {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #040404; 
+}
+.playa {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px; 
+}
+.contact-info {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent; 
+    color: black;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.playa-container:hover .playa {
+    opacity: 0; 
+}
+.playa-container:hover .contact-info {
+    opacity: 1; 
+    visibility: visible;
+}

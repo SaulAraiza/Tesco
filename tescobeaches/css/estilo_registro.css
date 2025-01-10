@@ -1,0 +1,37 @@
+body {
+    background-color: #20B2AA; 
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-body {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #2e8b57; /* Verde oscuro */
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #2e8b57;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #245c45;
+}
+
+a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
