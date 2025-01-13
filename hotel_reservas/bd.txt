@@ -1,0 +1,15 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS reservaciones_hotel;
+
+-- Usar la base de datos
+USE reservaciones_hotel;
+
+-- Crear la tabla `users`
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,         -- ID único para cada usuario
+    nombre VARCHAR(100) NOT NULL,              -- Nombre del usuario
+    email VARCHAR(100) NOT NULL UNIQUE,        -- Correo electrónico (único)
+    contraseña VARCHAR(255) NOT NULL,          -- Contraseña (almacenada como hash)
+    rol ENUM('cliente', 'admin') DEFAULT 'cliente', -- Rol del usuario, por defecto 'cliente'
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Fecha y hora de creación
+);
