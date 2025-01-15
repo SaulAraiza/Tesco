@@ -13,7 +13,7 @@ $nombre_usuario = $_SESSION['usuario_nombre'];
 $rol_usuario = $_SESSION['usuario_rol'];
 
 // Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'reservaciones_hotel');
+$conn = new mysqli('localhost', 'root', 'root', 'reservaciones_hotel');
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }

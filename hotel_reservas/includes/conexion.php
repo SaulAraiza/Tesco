@@ -4,7 +4,7 @@
 // Detalles de la conexión
 $servername = "localhost"; // Servidor (localhost para entorno local)
 $username = "root";        // Usuario de MySQL (por defecto: root en XAMPP)
-$password = "";            // Contraseña de MySQL (por defecto: vacío en XAMPP)
+$password = "root";        // Contraseña de MySQL (por defecto: vacío en XAMPP, root en MAMP)
 $dbname = "reservaciones_hotel"; // Nombre de la base de datos
 
 // Crear conexión
