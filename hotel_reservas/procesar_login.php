@@ -1,7 +1,8 @@
 <?php
 // procesar_login.php
 session_start();
-include 'includes/conexion.php'; // Asegúrate de tener este archivo para la conexión a la base de datos
+// Conexión a la base de datos
+include 'includes/conexion.php'; // Archivo de conexión a la base de datos
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtener y limpiar los datos ingresados por el usuario

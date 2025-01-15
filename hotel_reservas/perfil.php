@@ -1,16 +1,12 @@
 <?php
 session_start();
+// Conexión a la base de datos
+include 'includes/conexion.php'; // Archivo de conexión a la base de datos
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: login.php");
     exit();
-}
-
-// Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'reservaciones_hotel');
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
 }
 
 // Obtener información del usuario

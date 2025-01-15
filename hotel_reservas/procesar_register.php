@@ -1,5 +1,6 @@
 <?php
 session_start();
+// Conexión a la base de datos
 include 'includes/conexion.php'; // Archivo de conexión a la base de datos
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

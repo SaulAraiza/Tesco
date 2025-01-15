@@ -1,6 +1,8 @@
 <?php
 // index.php
 session_start();
+// Conexión a la base de datos
+include 'includes/conexion.php'; // Archivo de conexión a la base de datos
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario_id'])) {
@@ -11,12 +13,6 @@ if (!isset($_SESSION['usuario_id'])) {
 // Puedes acceder a la información del usuario utilizando las variables de sesión
 $nombre_usuario = $_SESSION['usuario_nombre'];
 $rol_usuario = $_SESSION['usuario_rol'];
-
-// Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', 'root', 'reservaciones_hotel');
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
-}
 
 // Manejar la reservación
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

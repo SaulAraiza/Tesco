@@ -1,17 +1,13 @@
 <?php
 // admin_dashboard.php
 session_start();
+// Conexión a la base de datos
+include 'includes/conexion.php'; // Archivo de conexión a la base de datos
 
 // Verificar si el usuario tiene el rol de administrador
 if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'admin') {
     header("Location: login.php");
     exit();
-}
-
-// Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'reservaciones_hotel');
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
 }
 
 // Manejar eliminación de reservación
